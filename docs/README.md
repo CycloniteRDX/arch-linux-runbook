@@ -15,7 +15,7 @@ are listed below; filenames may change before the first stable release.
 | [07. Generate fstab](07-generate-fstab.md) | Generate the file once with `>`, inspect it with `cat`, and verify it with `findmnt`. |
 | [08. Basic system configuration](08-basic-system-configuration.md) | Enter the chroot and configure time, locale, console keymap, hostname, and root authentication. |
 | [09. Users and networking](09-users-and-networking.md) | Create the regular user, verify `sudo`, and enable networking plus time synchronization. |
-| 10. Encrypted-root initramfs | Configure the systemd-based `mkinitcpio` hooks and kernel command line. |
+| [10. Encrypted-root initramfs](10-encrypted-root-initramfs.md) | Configure the systemd-based `mkinitcpio` hooks and encrypted-LVM kernel command line. |
 | 11. Unified kernel images | Generate normal and fallback UKIs directly from the kernel preset. |
 | 12. systemd-boot | Install and configure the boot manager around the UKIs. |
 | 13. Secure Boot | Create or enroll keys safely, sign required EFI binaries, and verify signatures. |

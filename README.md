@@ -11,8 +11,8 @@ successful TTY login.
 
 ## Project status
 
-Early development. The procedure is defined through user, privilege, and
-network-service configuration, but it is not yet ready to follow end to end.
+Early development. The procedure is defined through encrypted-root early-boot
+configuration, but it is not yet ready to follow end to end.
 
 ## Scope
 

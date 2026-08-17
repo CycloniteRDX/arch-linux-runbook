@@ -11,8 +11,8 @@ successful TTY login.
 
 ## Project status
 
-Early development. The procedure is defined through base-system installation,
-but it is not yet ready to follow end to end.
+Early development. The procedure is defined through persistent filesystem
+configuration, but it is not yet ready to follow end to end.
 
 ## Scope
 

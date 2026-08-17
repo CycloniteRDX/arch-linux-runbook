@@ -17,7 +17,7 @@ are listed below; filenames may change before the first stable release.
 | [09. Users and networking](09-users-and-networking.md) | Create the regular user, verify `sudo`, and enable networking plus time synchronization. |
 | [10. Encrypted-root initramfs](10-encrypted-root-initramfs.md) | Configure the systemd-based `mkinitcpio` hooks and encrypted-LVM kernel command line. |
 | [11. Unified kernel images](11-unified-kernel-images.md) | Generate and inspect normal plus fallback UKIs directly from the Linux kernel preset. |
-| 12. systemd-boot | Install and configure the boot manager around the UKIs. |
+| [12. systemd-boot](12-systemd-boot.md) | Install the boot manager, configure its menu, and verify automatic UKI discovery. |
 | 13. Secure Boot | Create or enroll keys safely, sign required EFI binaries, and verify signatures. |
 | 14. First boot | Exit the chroot, unmount safely, reboot, and verify LUKS unlock plus TTY login. |
 

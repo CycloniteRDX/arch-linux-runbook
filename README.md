@@ -11,8 +11,8 @@ successful TTY login.
 
 ## Project status
 
-Early development. The procedure is defined through direct normal and fallback
-UKI generation, but it is not yet ready to follow end to end.
+Early development. The procedure is defined through systemd-boot installation
+and UKI discovery, but it is not yet ready to follow end to end.
 
 ## Scope
 

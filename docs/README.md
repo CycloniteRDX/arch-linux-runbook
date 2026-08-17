@@ -6,7 +6,7 @@ are listed below; filenames may change before the first stable release.
 | Chapter | Purpose |
 | --- | --- |
 | [00. Installation profile](00-installation-profile.md) | Define assumptions, substitutions, and the final layout. |
-| [01. Pre-installation](01-pre-installation.md) | Boot the ISO, verify UEFI mode, connect to the network, and confirm the target disk. |
+| [01. Pre-installation](01-pre-installation.md) | Prepare firmware Setup Mode, boot the ISO, connect to the network, and confirm the target disk. |
 | [02. Partitioning](02-partitioning.md) | Create the GPT layout and preserve the intentional unallocated SSD space. |
 | [03. LUKS2 encryption](03-luks2-encryption.md) | Create and open the encrypted container. |
 | [04. LVM and filesystems](04-lvm-and-filesystems.md) | Create the volume group, logical volumes, swap, and ext4 filesystems. |
@@ -18,7 +18,7 @@ are listed below; filenames may change before the first stable release.
 | [10. Encrypted-root initramfs](10-encrypted-root-initramfs.md) | Configure the systemd-based `mkinitcpio` hooks and encrypted-LVM kernel command line. |
 | [11. Unified kernel images](11-unified-kernel-images.md) | Generate and inspect normal plus fallback UKIs directly from the Linux kernel preset. |
 | [12. systemd-boot](12-systemd-boot.md) | Install the boot manager, configure its menu, and verify automatic UKI discovery. |
-| 13. Secure Boot | Create or enroll keys safely, sign required EFI binaries, and verify signatures. |
+| [13. Secure Boot](13-secure-boot.md) | Enroll custom plus Microsoft keys, sign the boot chain, and verify automatic re-signing. |
 | 14. First boot | Exit the chroot, unmount safely, reboot, and verify LUKS unlock plus TTY login. |
 
 ## Boundary conditions

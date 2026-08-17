@@ -2,25 +2,52 @@
 
 ## Goal
 
-Boot the official Arch Linux installation medium and confirm that the live
-environment, network, clock, and target disk are ready for installation.
+Prepare the ThinkPad firmware for custom Secure Boot keys, boot the official
+Arch Linux installation medium, and confirm that the live environment,
+network, clock, and target disk are ready for installation.
 
-Nothing in this chapter writes to the internal SSD.
+Nothing in this chapter writes to the internal SSD. Entering Setup Mode does,
+however, change the Secure Boot key state stored by the firmware.
 
 ## Prerequisites
 
-Before booting the installer:
+Before changing the firmware or booting the installer:
 
 - Back up every file that must be preserved from the target laptop.
 - Write a current official Arch Linux ISO to a USB drive.
 - Connect the ThinkPad to AC power.
 - Disconnect external drives that are not needed for the installation.
-- Configure the firmware for UEFI-only boot.
-- Temporarily disable Secure Boot so the official installation medium can
-  start. Do not clear the firmware keys merely to boot the ISO.
+- Confirm that the machine will be erased and is not keeping a dual-boot OS.
+- Back up any non-factory Secure Boot keys that must be preserved.
 
 This runbook erases the existing partition table and operating systems on the
 selected internal SSD. It is not a dual-boot procedure.
+
+## Put the firmware in Setup Mode
+
+The custom Platform Key created in chapter 13 can only be enrolled while the
+firmware is in Setup Mode. Prepare that state before starting the installation:
+
+1. Start the ThinkPad and press `F1` to enter the UEFI setup utility.
+2. Configure startup for UEFI-only operation.
+3. Open `Security` → `Secure Boot`.
+4. Select `Reset to Setup Mode` and confirm the warning.
+5. Confirm that `Platform Mode` now reports `Setup Mode`.
+6. Save the firmware settings with `F10` and shut down.
+
+> [!CAUTION]
+> `Reset to Setup Mode` removes the current Platform Key. It is not the same
+> operation as loading general BIOS defaults. Use it only on the machine being
+> reinstalled with custom keys.
+
+Do not select `Restore Factory Keys`, because that returns the firmware to
+vendor-controlled User Mode. Do not use `Clear All Secure Boot Keys`; the
+canonical procedure only needs Setup Mode and later enrolls Microsoft
+certificates alongside the new owner keys.
+
+Signature enforcement is inactive while the firmware has no Platform Key, so
+the official installation medium can boot. Do not manually leave Setup Mode
+during the remaining installation chapters.
 
 ## Boot the installation medium
 
@@ -210,6 +237,8 @@ removed in this chapter.
 Do not continue to partitioning if any of the following is true:
 
 - Required data has not been backed up.
+- Non-factory Secure Boot keys must be kept but have not been backed up.
+- The firmware does not report Setup Mode.
 - The environment is not booted in 64-bit UEFI mode.
 - The installation medium has no working network connection.
 - The system clock is clearly incorrect after NTP has had time to synchronize.
@@ -221,6 +250,7 @@ Do not continue to partitioning if any of the following is true:
 
 Before continuing, all of these statements must be true:
 
+- The firmware was placed in Setup Mode with `Reset to Setup Mode`.
 - The prompt is the Arch Linux live root shell.
 - The console keymap matches the physical keyboard.
 - `fw_platform_size` reports `64`.
@@ -238,7 +268,8 @@ Before continuing, all of these statements must be true:
 - [ArchWiki: Linux console fonts](https://wiki.archlinux.org/title/Linux_console#Fonts)
 - [Arch manual: lsblk(8)](https://man.archlinux.org/man/lsblk.8)
 - [Arch manual: fdisk(8)](https://man.archlinux.org/man/fdisk.8)
-- [ArchWiki: Secure Boot installation media](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot#Booting_an_installation_medium)
+- [ArchWiki: Secure Boot](https://wiki.archlinux.org/title/Unified_Extensible_Firmware_Interface/Secure_Boot)
+- [Arch manual: sbctl(8)](https://man.archlinux.org/man/sbctl.8)
 
 ## Next step
 

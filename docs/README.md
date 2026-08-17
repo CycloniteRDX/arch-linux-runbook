@@ -9,7 +9,7 @@ are listed below; filenames may change before the first stable release.
 | [01. Pre-installation](01-pre-installation.md) | Boot the ISO, verify UEFI mode, connect to the network, and confirm the target disk. |
 | [02. Partitioning](02-partitioning.md) | Create the GPT layout and preserve the intentional unallocated SSD space. |
 | [03. LUKS2 encryption](03-luks2-encryption.md) | Create and open the encrypted container. |
-| 04. LVM and filesystems | Create the volume group, logical volumes, swap, and ext4 filesystems. |
+| [04. LVM and filesystems](04-lvm-and-filesystems.md) | Create the volume group, logical volumes, swap, and ext4 filesystems. |
 | 05. Mount target | Mount `/`, `/home`, and `/boot`, then enable installation swap. |
 | 06. Base system | Install the base packages, kernel, firmware, microcode, networking, and essential tools. |
 | 07. Generate fstab | Generate the file once with `>`, inspect it with `cat`, and verify it with `findmnt`. |

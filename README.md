@@ -11,8 +11,9 @@ successful TTY login.
 
 ## Project status
 
-Early development. The installation profile, pre-installation checks, and GPT
-layout are defined, but the procedure is not yet ready to follow end to end.
+Early development. The installation profile, pre-installation checks, GPT
+layout, and LUKS2 container setup are defined, but the procedure is not yet
+ready to follow end to end.
 
 ## Scope
 

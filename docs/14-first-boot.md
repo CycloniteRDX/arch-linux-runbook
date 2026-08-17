@@ -179,7 +179,10 @@ Confirm that:
 - `/` uses `/dev/mapper/vg0-root` as ext4;
 - `/home` uses `/dev/mapper/vg0-home` as ext4;
 - `/boot` uses `/dev/nvme0n1p1` as vfat;
-- `/dev/mapper/vg0-swap` is active swap.
+- the 16 GiB `vg0/swap` logical volume is active swap.
+
+`swapon --show` may identify that LV through a `/dev/dm-*` kernel name. Confirm
+its parentage in the `lsblk` tree instead of requiring one exact alias.
 
 Verify that the EFI System Partition retained its root-only mount masks:
 
@@ -230,11 +233,12 @@ networks and request credentials interactively:
 
 ```bash
 nmcli device wifi list
-nmcli --ask device wifi connect "NETWORK_NAME"
+sudo nmcli --ask device wifi connect "NETWORK_NAME"
 ```
 
-Do not place the Wi-Fi password directly in the command. Verify connectivity,
-DNS, and the clock:
+The initial connection uses `sudo` because polkit has not been installed yet.
+`--ask` still requests the Wi-Fi secret interactively; do not place it directly
+in the command. Verify connectivity, DNS, and the clock:
 
 ```bash
 ping -c 3 archlinux.org

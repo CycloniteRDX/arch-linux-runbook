@@ -55,13 +55,14 @@ The reference 512 GB SSD reports approximately 476.9 GiB to Linux.
 | GPT metadata | Automatic | Partition table |
 | Partition 1 | 1 GiB | FAT32 EFI System Partition |
 | Partition 2 | 400 GiB | LUKS2 encrypted container |
-| Unpartitioned tail | About 75.9 GiB | Intentional host-provided SSD spare area |
+| Unpartitioned tail | About 75.9 GiB | Intentional unpartitioned SSD space |
 
-The unpartitioned tail is deliberate. It gives the SSD controller additional
-unused flash-address space when those blocks are known to be unused. It may
-help garbage collection and sustained-write behavior, but it is not a backup,
-a security boundary, or a substitute for TRIM and the SSD's factory spare
-area.
+The unpartitioned tail is deliberate. It can give the SSD controller additional
+unused logical-address space when those blocks have never been written or have
+previously been discarded. Merely removing an old partition does not prove
+that all of its former blocks were discarded. This space is not a backup, a
+security boundary, or a substitute for periodic TRIM and the SSD's factory
+spare area.
 
 Inside the opened LUKS2 container:
 

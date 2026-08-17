@@ -11,9 +11,9 @@ successful TTY login.
 
 ## Project status
 
-First complete draft. The procedure now reaches a verified TTY through a
-signed Secure Boot chain, but it must pass a clean end-to-end installation test
-before it is considered stable.
+Internally reviewed complete draft. The chapters form one continuous path to a
+verified TTY through a signed Secure Boot chain, but the procedure must still
+pass a clean end-to-end installation test before it is considered stable.
 
 ## Scope
 

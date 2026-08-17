@@ -11,7 +11,7 @@ EFI System Partition, swap LV, root LV, and home LV.
 | `/dev/vg0/swap` | 16 GiB | Linux swap | Encrypted disk-backed swap |
 | `/dev/vg0/root` | 192 GiB | ext4 | Root filesystem |
 | `/dev/vg0/home` | Remaining space | ext4 | Home filesystem |
-| Free space in `vg0` | 256 MiB | Unallocated | Space required by `e2scrub` |
+| Free space in `vg0` | 256 MiB | Unallocated | Snapshot space reserved for `e2scrub` |
 
 Small differences in the displayed home and VG sizes are normal because LUKS
 and LVM store metadata and LVM allocates space in whole extents.

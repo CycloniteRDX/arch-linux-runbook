@@ -92,8 +92,14 @@ Confirm that:
 - `/dev/vg0/home` is mounted at `/mnt/home`.
 - `/dev/nvme0n1p1` is mounted at `/mnt/boot`.
 - The `/mnt/boot` options include `fmask=0177` and `dmask=0077`.
-- `/dev/vg0/swap` is active and approximately 16 GiB.
+- The 16 GiB `vg0/swap` logical volume is active.
 - All three filesystems are mounted read-write.
+
+Depending on the util-linux version, `swapon --show` may display the active LV
+through a kernel device-mapper name such as `/dev/dm-1` instead of the friendly
+`/dev/vg0/swap` symlink. Use the `lsblk` tree to confirm that the displayed
+swap device belongs to `vg0/swap`; the different path spelling does not mean
+that a second swap area exists.
 
 Leave every mount and the swap LV active. The next chapter installs the base
 system into this hierarchy.

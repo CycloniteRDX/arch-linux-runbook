@@ -1,7 +1,8 @@
 # Runbook chapter map
 
-The runbook will be written and tested one chapter at a time. Planned chapters
-are listed below; filenames may change before the first stable release.
+The runbook is organized as one linear sequence. Every chapter is present, but
+the complete procedure must still pass a clean hardware installation test
+before the first stable release.
 
 | Chapter | Purpose |
 | --- | --- |

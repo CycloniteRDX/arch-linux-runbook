@@ -14,7 +14,9 @@ however, change the Secure Boot key state stored by the firmware.
 Before changing the firmware or booting the installer:
 
 - Back up every file that must be preserved from the target laptop.
-- Write a current official Arch Linux ISO to a USB drive.
+- Download the current Arch Linux ISO and its detached signature from the
+  official download page, verify the signature, and write the verified image
+  to a USB drive.
 - Connect the ThinkPad to AC power.
 - Disconnect external drives that are not needed for the installation.
 - Confirm that the machine will be erased and is not keeping a dual-boot OS.
@@ -237,6 +239,7 @@ removed in this chapter.
 Do not continue to partitioning if any of the following is true:
 
 - Required data has not been backed up.
+- The installation ISO's detached signature was not verified successfully.
 - Non-factory Secure Boot keys must be kept but have not been backed up.
 - The firmware does not report Setup Mode.
 - The environment is not booted in 64-bit UEFI mode.
@@ -251,6 +254,7 @@ Do not continue to partitioning if any of the following is true:
 Before continuing, all of these statements must be true:
 
 - The firmware was placed in Setup Mode with `Reset to Setup Mode`.
+- The installation medium was created from a signature-verified Arch Linux ISO.
 - The prompt is the Arch Linux live root shell.
 - The console keymap matches the physical keyboard.
 - `fw_platform_size` reports `64`.
@@ -262,6 +266,7 @@ Before continuing, all of these statements must be true:
 ## Sources
 
 - [Arch Linux installation guide](https://wiki.archlinux.org/title/Installation_guide)
+- [Arch Linux downloads and verification information](https://archlinux.org/download/)
 - [Arch manual: iwctl(1)](https://man.archlinux.org/man/iwctl.1)
 - [Arch manual: rfkill(8)](https://man.archlinux.org/man/rfkill.8)
 - [Arch manual: loadkeys(1)](https://man.archlinux.org/man/loadkeys.1)

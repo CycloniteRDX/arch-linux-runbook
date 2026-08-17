@@ -125,6 +125,10 @@ The Wi-Fi connection used by the installation image is not copied into the
 installed system. The first-boot chapter will reconnect using NetworkManager.
 Wired Ethernet normally obtains a connection automatically through DHCP.
 
+Polkit is deliberately deferred until the graphical workstation is assembled.
+The first Wi-Fi profile is therefore created with `sudo nmcli` in chapter 14;
+read-only `nmcli` inspection remains available to the regular user.
+
 ## Enable automatic time synchronization
 
 ```bash

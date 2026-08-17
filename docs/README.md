@@ -11,7 +11,7 @@ are listed below; filenames may change before the first stable release.
 | [03. LUKS2 encryption](03-luks2-encryption.md) | Create and open the encrypted container. |
 | [04. LVM and filesystems](04-lvm-and-filesystems.md) | Create the volume group, logical volumes, swap, and ext4 filesystems. |
 | [05. Mount target](05-mount-target.md) | Mount `/`, `/home`, and `/boot`, then enable installation swap. |
-| 06. Base system | Install the base packages, kernel, firmware, microcode, networking, and essential tools. |
+| [06. Base system](06-install-base-system.md) | Install the base packages, kernel, firmware, microcode, networking, and essential tools. |
 | 07. Generate fstab | Generate the file once with `>`, inspect it with `cat`, and verify it with `findmnt`. |
 | 08. Basic system configuration | Configure time, locale, console keymap, hostname, hosts, root access, and chroot. |
 | 09. Users and networking | Create the regular user, configure `sudo`, and enable NetworkManager. |

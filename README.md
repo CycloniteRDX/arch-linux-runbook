@@ -11,8 +11,8 @@ successful TTY login.
 
 ## Project status
 
-Early development. The installation profile and storage stack through target
-mounting are defined, but the procedure is not yet ready to follow end to end.
+Early development. The procedure is defined through base-system installation,
+but it is not yet ready to follow end to end.
 
 ## Scope
 

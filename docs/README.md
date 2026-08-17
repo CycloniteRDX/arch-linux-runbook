@@ -5,7 +5,7 @@ are listed below; filenames may change before the first stable release.
 
 | Chapter | Purpose |
 | --- | --- |
-| 00. Installation profile | Define assumptions, substitutions, and the final layout. |
+| [00. Installation profile](00-installation-profile.md) | Define assumptions, substitutions, and the final layout. |
 | 01. Pre-installation | Boot the ISO, verify UEFI mode, connect to the network, and confirm the target disk. |
 | 02. Partitioning | Create the GPT layout and preserve the intentional unallocated SSD space. |
 | 03. LUKS2 encryption | Create and open the encrypted container. |

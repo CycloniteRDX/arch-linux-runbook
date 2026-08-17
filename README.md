@@ -11,8 +11,8 @@ successful TTY login.
 
 ## Project status
 
-Early design stage. The repository structure and target installation profile
-are defined, but the procedure is not yet ready to follow end to end.
+Early development. The canonical installation profile is defined, but the
+procedure is not yet ready to follow end to end.
 
 ## Scope
 
@@ -53,9 +53,8 @@ related repositories.
 | Secure Boot | Custom keys managed with `sbctl` |
 | Network service | NetworkManager |
 
-The reference 512 GB layout deliberately keeps part of the SSD unpartitioned
-and leaves a small amount of free space in the LVM volume group. Exact device
-capacity and identifiers must still be discovered during installation.
+The complete set of assumptions, names, sizes, and acceptance criteria is in
+the [canonical installation profile](docs/00-installation-profile.md).
 
 ## Writing rules
 

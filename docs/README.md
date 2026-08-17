@@ -13,7 +13,7 @@ are listed below; filenames may change before the first stable release.
 | [05. Mount target](05-mount-target.md) | Mount `/`, `/home`, and `/boot`, then enable installation swap. |
 | [06. Base system](06-install-base-system.md) | Install the base packages, kernel, firmware, microcode, networking, and essential tools. |
 | [07. Generate fstab](07-generate-fstab.md) | Generate the file once with `>`, inspect it with `cat`, and verify it with `findmnt`. |
-| 08. Basic system configuration | Configure time, locale, console keymap, hostname, hosts, root access, and chroot. |
+| [08. Basic system configuration](08-basic-system-configuration.md) | Enter the chroot and configure time, locale, console keymap, hostname, and root authentication. |
 | 09. Users and networking | Create the regular user, configure `sudo`, and enable NetworkManager. |
 | 10. Encrypted-root initramfs | Configure the systemd-based `mkinitcpio` hooks and kernel command line. |
 | 11. Unified kernel images | Generate normal and fallback UKIs directly from the kernel preset. |

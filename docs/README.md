@@ -7,7 +7,7 @@ are listed below; filenames may change before the first stable release.
 | --- | --- |
 | [00. Installation profile](00-installation-profile.md) | Define assumptions, substitutions, and the final layout. |
 | [01. Pre-installation](01-pre-installation.md) | Boot the ISO, verify UEFI mode, connect to the network, and confirm the target disk. |
-| 02. Partitioning | Create the GPT layout and preserve the intentional unallocated SSD space. |
+| [02. Partitioning](02-partitioning.md) | Create the GPT layout and preserve the intentional unallocated SSD space. |
 | 03. LUKS2 encryption | Create and open the encrypted container. |
 | 04. LVM and filesystems | Create the volume group, logical volumes, swap, and ext4 filesystems. |
 | 05. Mount target | Mount `/`, `/home`, and `/boot`, then enable installation swap. |

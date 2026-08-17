@@ -11,8 +11,8 @@ successful TTY login.
 
 ## Project status
 
-Early development. The installation profile and pre-installation checks are
-defined, but the procedure is not yet ready to follow end to end.
+Early development. The installation profile, pre-installation checks, and GPT
+layout are defined, but the procedure is not yet ready to follow end to end.
 
 ## Scope
 

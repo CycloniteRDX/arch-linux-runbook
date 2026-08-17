@@ -11,8 +11,9 @@ successful TTY login.
 
 ## Project status
 
-Early development. The procedure is defined through Secure Boot key enrollment
-and complete boot-chain signing, but it is not yet ready to follow end to end.
+First complete draft. The procedure now reaches a verified TTY through a
+signed Secure Boot chain, but it must pass a clean end-to-end installation test
+before it is considered stable.
 
 ## Scope
 

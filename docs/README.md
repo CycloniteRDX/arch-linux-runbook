@@ -19,7 +19,7 @@ are listed below; filenames may change before the first stable release.
 | [11. Unified kernel images](11-unified-kernel-images.md) | Generate and inspect normal plus fallback UKIs directly from the Linux kernel preset. |
 | [12. systemd-boot](12-systemd-boot.md) | Install the boot manager, configure its menu, and verify automatic UKI discovery. |
 | [13. Secure Boot](13-secure-boot.md) | Enroll custom plus Microsoft keys, sign the boot chain, and verify automatic re-signing. |
-| 14. First boot | Exit the chroot, unmount safely, reboot, and verify LUKS unlock plus TTY login. |
+| [14. First boot](14-first-boot.md) | Close the installer safely and verify Secure Boot, LUKS, mounts, services, networking, and TTY access. |
 
 ## Boundary conditions
 

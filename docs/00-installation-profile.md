@@ -81,8 +81,8 @@ useful snapshot reserve.
 - `/` uses ext4 with 1% reserved blocks.
 - `/home` uses ext4 with 0% reserved blocks.
 - `/boot` uses FAT32 because it is the EFI System Partition.
-- `/boot` is mounted with `fmask=0077,dmask=0077` so only root can traverse or
-  read its contents through the mounted filesystem.
+- `/boot` is mounted with `fmask=0177,dmask=0077` so directories appear as
+  mode `700` and regular files as mode `600`, both accessible only to root.
 - Continuous ext4 `discard` mount options are not used.
 - Periodic TRIM and LUKS discard propagation are configured after the first
   boot in `arch-linux-post-install`.
@@ -187,5 +187,5 @@ Those steps begin in `arch-linux-post-install`.
 
 ## Next step
 
-Continue with chapter 01 to boot the installation medium, verify UEFI mode,
-establish networking, and identify the target disk safely.
+Continue with chapter 01 to prepare firmware Setup Mode, boot the installation
+medium, establish networking, and identify the target disk safely.
